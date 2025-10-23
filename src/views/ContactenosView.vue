@@ -1,5 +1,9 @@
 <template>
   <div>
+    <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.7328665067566!2d-89.28140622451382!3d13.674000799089193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f632e511f372dd3%3A0x3fe0c1447718b059!2sITCA%20-%20FEPADE!5e0!3m2!1ses-419!2ssv!4v1761232784710!5m2!1ses-419!2ssv"
+            style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
     <div class="programa-container">
       <div class="header-section">
         <div class="red-triangle"></div>
@@ -46,25 +50,25 @@
           </div>
         </div>
 
-        <form class="contact-form" @submit="enviarFormulario">
+        <form class="contact-form">
           <label for="nombre">Nombre</label>
-          <input id="nombre" type="text" v-model="nombre" required />
+          <input id="nombre" type="text" />
 
           <label for="email">Correo electrónico</label>
-          <input id="email" type="email" v-model="email" required />
+          <input id="email" type="email" />
 
           <label for="enviar-a">Enviar correo a:</label>
-          <select id="enviar-a" v-model="enviarA">
+          <select id="enviar-a">
             <option>Atención al cliente</option>
             <option>Soporte técnico</option>
             <option>Información general</option>
           </select>
 
           <label for="asunto">Asunto</label>
-          <input id="asunto" type="text" v-model="asunto" required />
+          <input id="asunto" type="text" />
 
           <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" v-model="mensaje" required></textarea>
+          <textarea id="mensaje"></textarea>
 
           <button type="submit">ENVIAR</button>
         </form>
@@ -75,38 +79,15 @@
 
 <script>
 export default {
-  name: "ContactenosView",
-  data() {
-    return {
-      nombre: "",
-      email: "",
-      enviarA: "Atención al cliente",
-      asunto: "",
-      mensaje: ""
-    };
-  },
-  methods: {
-    enviarFormulario(e) {
-      e.preventDefault();
-      // Aquí puedes agregar la lógica para enviar el formulario, por ejemplo, usando fetch o axios
-      alert("Formulario enviado:\n" +
-        `Nombre: ${this.nombre}\n` +
-        `Correo: ${this.email}\n` +
-        `Enviar a: ${this.enviarA}\n` +
-        `Asunto: ${this.asunto}\n` +
-        `Mensaje: ${this.mensaje}`);
-      // Limpiar formulario si lo deseas
-      this.nombre = "";
-      this.email = "";
-      this.enviarA = "Atención al cliente";
-      this.asunto = "";
-      this.mensaje = "";
-    }
-  }
-};
+}
 </script>
 
 <style scoped>
+iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+}
 .programa-container {
   padding: 30px;
   font-family: Arial, sans-serif;
