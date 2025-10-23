@@ -23,13 +23,16 @@
                 <div class="red-triangle"></div>
                 <h1 class="programa-title">EVENTOS SOCIALES</h1>
             </div>
+
             <h4>ENTRE FAMILIA Y AMIGOS</h4>
+
             <p class="programa-text">
                 Lúzcase realizando esos festejos especiales saboreando exquisita comida, en un lugar rodeado de mucha
                 vegetación, con ambientes acogedores y con la mejor atención.
                 Le servimos en:
             </p>
-            <ul>
+
+            <ul class="listas">
                 <li>Bautizos</li>
                 <li>Primeras Comuniones</li>
                 <li>Compromisos Matrimoniales</li>
@@ -44,15 +47,16 @@
                 <li>Tés</li>
             </ul>
 
-
             <div class="header-section">
                 <div class="red-triangle"></div>
                 <h1 class="programa-title">EVENTOS EMPRESARIALES</h1>
             </div>
+
             <p class="programa-text">
                 Salga de la rutina y confíenos sus actividades empresariales
             </p>
-            <ul>
+
+            <ul class="listas">
                 <li>Seminarios</li>
                 <li>Coffee Breaks</li>
                 <li>Inauguraciones</li>
@@ -61,8 +65,10 @@
                 <li>Lanzamientos Publicitarios</li>
                 <li>Conferencias de Prensa</li>
             </ul>
+            
             <h4>Para dar cobertura a todas sus actividades le ofrecemos:</h4>
-            <ul>
+
+            <ul class="listas">
                 <li>Restaurante Mesón de Goya:
                     Elegante local con aire acondicionado, capacidad para 130 personas, área de reservado, terrazas,
                     zona infantil con divertidos juegos y para su comodidad y la de sus invitados contamos con amplio
@@ -75,17 +81,20 @@
                 <li>Auditórium Multiusos “Ing. Roberto Quiñónez Meza”:
                     Para 2,000 personas, con graderías, duela, pantalla gigante, equipo audiovisual.</li>
             </ul>
+
             <h6>**Parqueo con vigilancia dentro del Campus del ITCA.</h6>
 
             <div class="header-section">
                 <div class="red-triangle"></div>
                 <h1 class="programa-title">SERVICIO A DOMICILIO</h1>
             </div>
+
             <p class="programa-text">
                 En el lugar de su elección Restaurante Mesón de Goya le sirve con la misma calidad, guardando los
                 mínimos detalles y garantizando que su evento sea inolvidable.
             </p>
-            <ul>
+
+            <ul class="listas">
                 <li>Bautizos</li>
                 <li>Primeras Comuniones</li>
                 <li>Compromisos Matrimoniales</li>
@@ -178,5 +187,17 @@ img {
 
 .programa-container {
     margin: 0 75px;
+}
+
+.listas {
+    margin-left: 25px;
+}
+
+h4 {
+    margin: 20px 0;
+}
+
+h6 {
+    margin: 20px 0;
 }
 </style>

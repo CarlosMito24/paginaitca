@@ -1,14 +1,38 @@
 <template>
   <div class="superior_menu">
-    <img src="../src/assets/image.png" alt="" class="logo" router-link="../src/views/HomeView.vue" />
+    <router-link to="/" class="logo-link">
+      <img src="../src/assets/image.png" alt="Logo de la Institución" class="logo" />
+    </router-link>
+
 
     <div class="redes_sociales">
-      <img src="../src/assets/facebook.png" alt="" class="redes" />
-      <img src="../src/assets/instagram.png" alt="" class="redes" />
-      <img src="../src/assets/youtube.png" alt="" class="redes" />
-      <img src="../src/assets/x.png" alt="" class="redes" />
-      <img src="../src/assets/tiktok.png" alt="" class="redes" />
-      <img src="../src/assets/linkedin.png" alt="" class="redes" />
+      <a href="https://facebook.com/pages/ITCA-FEPADE-Sitio-Oficial/187531457964501" target="_blank">
+        <img src="../src/assets/facebook.png" alt="" class="redes" />
+      </a>
+
+      <a href="https://www.instagram.com/itca_fepade/" target="_blank">
+        <img src="../src/assets/instagram.png" alt="" class="redes" />
+      </a>
+
+      <a href="https://www.youtube.com/channel/UC1mxt9W2mI_VDCqDaMiQF2Q?feature=mhee" target="_blank">
+        <img src="../src/assets/youtube.png" alt="" class="redes" />
+      </a>
+
+      <a href="https://twitter.com/itcafepade" target="_blank">
+        <img src="../src/assets/x.png" alt="" class="redes" />
+      </a>
+
+      <a href="https://www.tiktok.com/@itca_fepade/" target="_blank">
+        <img src="../src/assets/tiktok.png" alt="" class="redes" />
+      </a>
+
+      <a href="https://sv.linkedin.com/school/itcaa/" target="_blank">
+        <img src="../src/assets/linkedin.png" alt="" class="redes" />
+      </a>
+
+      <input type="text" class="input">
+      
+      <img src="../src/assets/lupa.png" alt="" class="redes" />
     </div>
   </div>
   <nav>
@@ -17,7 +41,13 @@
     <router-link to="/nuevoingreso">Nuevo Ingreso</router-link>
     <router-link to="/cursosydiplomados">Cursos y Diplomados</router-link>
     <router-link to="/investigacionyproyeccionsocial">Investigación y proycción social</router-link>
-    <router-link to="/recursosestudiantiles">Recursos Estudiantiles</router-link>
+    <div class="menu-item-dropdown">
+      <router-link to="" class="enlace-principal">Recursos Estudiantiles</router-link>
+      <div class="submenu">
+        <a href="https://apps.itca.edu.sv/portalestudiantil/" target="_blank">Portal Estudiantil</a>
+        <a href="https://www.itca.edu.sv/conoce-tu-biblioteca/" target="_blank">Biblioteca</a>
+      </div>
+    </div>
     <router-link to="/noticias">Noticias</router-link>
     <router-link to="/contactenos">Contactenos</router-link>
     <router-link to="/mesondegoya">Mesón de Goya</router-link>
@@ -95,15 +125,47 @@
 }
 
 nav {
-  background: orange;
+  background: #D69C23;
   padding: 20px;
   color: #FFF;
   display: flex;
 }
 
+.menu-item-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  background-color: #FFF;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.submenu a {
+  color: darkred;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  margin: 0;
+}
+
+.submenu a:hover {
+  background-color: #d35400;
+}
+
+.menu-item-dropdown:hover .submenu {
+  display: block;
+}
+
 nav a {
   color: #FFF;
-  margin: 20px;
+  padding: 0 15px;
   display: inline-block;
   text-decoration: none;
   font-size: 15px;
@@ -116,7 +178,21 @@ nav a {
 .superior_menu {
   display: flex;
   justify-content: space-between;
+  background: #EBD299;
+  padding: 10px 50px;
+}
+
+.redes_sociales {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+}
+
+
+input {
+  width: 200px;
+  height: 20px;
+  border: none;
 }
 
 .redes {
@@ -127,6 +203,7 @@ nav a {
 }
 
 footer {
+  margin-top: 20px;
   bottom: 0;
   display: flex;
   background: beige;
